@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linha do Tempo - História para a UFRGS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="topo-conteudo">
+      <p class="selo">Vestibular UFRGS 2027</p>
+      <h1>Linha do Tempo da História</h1>
+      <p class="subtitulo">Clique em um acontecimento para abrir o resumo, ver imagem, assistir à aula e fazer suas anotações.</p>
+    </div>
+  </header>
+
+  <section class="painel">
+    <div class="progresso">
+      <div class="progresso-texto">
+        <span id="progresso-label">0 de 0 estudados</span>
+        <span id="progresso-pct">0%</span>
+      </div>
+      <div class="barra"><div id="barra-preenchida" class="barra-preenchida"></div></div>
+    </div>
+
+    <div class="controles">
+      <input id="busca" type="search" placeholder="Buscar evento, data ou personagem..." aria-label="Buscar">
+      <div class="filtros" id="filtros-bloco"></div>
+      <div class="filtros">
+        <button class="chip" data-estado="todos">Todos</button>
+        <button class="chip" data-estado="pendentes">Pendentes</button>
+        <button class="chip" data-estado="estudados">Estudados</button>
+        <button class="chip" data-estado="favoritos">Favoritos</button>
+        <button class="chip" data-estado="anotados">Com anotação</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="linha" id="linha" aria-label="Linha do tempo"></main>
+
+  <aside class="detalhe" id="detalhe" aria-hidden="true">
+    <div class="detalhe-fundo" id="detalhe-fundo"></div>
+    <article class="detalhe-folha" id="detalhe-folha"></article>
+  </aside>
+
+  <footer class="rodape">
+    <p>Material de estudo feito a partir das conversas com o Claude. Suas marcações ficam salvas só neste navegador.</p>
+    <button class="btn-limpar" id="btn-limpar">Apagar minhas marcações</button>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
